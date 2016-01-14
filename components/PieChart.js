@@ -3,7 +3,7 @@ import d3 from 'd3'
 export default class PieChart {
     constructor(options) {
         var options = options || {},
-            dataset = options.dataset || {uid: [], value: [], color: []},
+            dataset = options.dataset || {id: [], value: [], color: []},
             width = options.width || 140,
             height = options.height || 140,
             radius = Math.min(width, height) / 2,
@@ -23,7 +23,7 @@ export default class PieChart {
                 return;
             }
             if (typeof options.mouseover === 'function') {
-                options.mouseover(dataset.uid[i]);
+                options.mouseover(dataset.id[i]);
             }
 
             svg.selectAll('path')
@@ -53,7 +53,7 @@ export default class PieChart {
             }
 
             if (typeof options.mouseover === 'function') {
-                options.mouseout(dataset.uid[i]);
+                options.mouseout(dataset.id[i]);
             }
 
             svg.selectAll('path')
@@ -134,16 +134,16 @@ export default class PieChart {
             })
 
         return {
-            hover(uid) {
-                var idx = dataset.uid.indexOf(uid);
+            hover(id) {
+                var idx = dataset.id.indexOf(id);
                 if (~idx) {
                     callbackMouseOver(null, idx);
                 }
                 return this;
             },
 
-            out (uid) {
-                var idx = dataset.uid.indexOf(uid);
+            out (id) {
+                var idx = dataset.id.indexOf(id);
                 if (~idx) {
                     callbackMouseOut(null, idx);
                 }
@@ -158,8 +158,8 @@ export default class PieChart {
                 return this;
             },
 
-            remove(uid) {
-                var i = dataset.uid.indexOf(uid),
+            remove(id) {
+                var i = dataset.id.indexOf(id),
                     free = dataset.value[i];
 
                 for (k in dataset) {

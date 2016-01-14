@@ -22,10 +22,14 @@ module.exports = {
       loaders: ['babel'],
       exclude: /node_modules/,
       include: __dirname
-    },{
-      test: /\.css$/,
-      loaders: ['style','css'],
-      exclude: /node_modules/
+    },
+    {
+      test: /\.less$/,
+      loader: 'style!css!less'
+    },
+    {
+      test: /\.(png|jpg)$/,
+      loader: 'url?limit=25000'
     }]
   }
 }

@@ -2,42 +2,38 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import $ from 'jquery'
 import PieChart from './PieChart'
+import '../styles/PieArea.less'
 
 export default class PieArea extends Component {
-    // props:
-    // plan + updatePlanText
-    // this.props.id -> this.props.plan.contract_id
-    // this.props.name -> this.props.plan.nickname
-    // this.props.labels -> this.props.plan.devices
     componentDidMount() {
         var dataset = {
-                uid: [],
+                id: [],
                 value: [],
                 color: []
             },
             container = '#chart_' + this.props.cardId,
             elem = this.refs['pie-' + this.props.cardId];
 
-        this.props.labels.map(function (element, i) {
-            dataset.uid.push(element.uid);
+        this.props.labels.map((element, i) => {
+            dataset.id.push(element[this.props.labelId]);
             dataset.value.push(element.event_total);
             dataset.color.push(element.color_tag);
         });
 
-        new PieChart({
+        this.props.pie[this.props.cardId] = new PieChart({
             dataset: dataset,
             total: this.props.plan.event_quota,
             container: container,
-            mouseover: function (uid) {
-                $(elem).find('.VCam_menu li').each(function () {
-                    if ($(this).find('#close_s').data('uid') === uid) {
+            mouseover: function (id) {
+                $(elem).find('.label_list li').each(function () {
+                    if ($(this).find('.close_s').data(this.props.labelId) === id) {
                         $(this).css('background-color', '#f0f0f2');
                     }
                 });
             },
-            mouseout: function (uid) {
-                $(elem).find('.VCam_menu li').each(function () {
-                    if ($(this).find('#close_s').data('uid') === uid) {
+            mouseout: function (id) {
+                $(elem).find('.label_list li').each(function () {
+                    if ($(this).find('.close_s').data(this.props.labelId) === id) {
                         $(this).css('background-color', '');
                     }
                 });
@@ -63,10 +59,10 @@ export default class PieArea extends Component {
                   onpagenavigation>
                 </div>
                 <input
-                  id="device_name"
+                  id={'card_name_' + this.props.cardId}
                   ref={'input-text-' + this.props.cardId}
                   type="text"
-                  className={'device_name_' + this.props.cardId}
+                  className="card_name"
                   value={this.props.name}
                   maxLength="25"
                   onBlur={this.updateTitle}>

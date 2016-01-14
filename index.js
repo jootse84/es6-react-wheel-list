@@ -76,20 +76,8 @@ var plans = [{
 
 
 class PlanList extends Component {
-    _showUnbindCameraPage(params) {
-        console.log('show unbind camera page')
-    }
-
-    _showBindCameraPage(params) {
-        console.log('show bind camera page')
-    }
-
-    _showAddCameraPage(params) {
-        console.log('add camera page')
-    }
-
-    _updatePlanText(params) {
-        console.log('updated Plan Text')
+    _dummy(params) {
+        console.log('dummy')
     }
 
     render() {
@@ -98,11 +86,12 @@ class PlanList extends Component {
                 cards={plans}
                 cardId='contract_id'
                 labelsId='devices'
-                titleChanged={this._updatePlanText}
-                delLabelClicked={this._showUnbindCameraPage}
-                addLabelClicked={this._showBindCameraPage}
+                labelId='uid'
+                titleChanged={this._dummy.bind(this)}
+                delLabelClicked={this._dummy.bind(this)}
+                addLabelClicked={this._dummy.bind(this)}
                 addLabelText='Binding Camera'
-                addCardClicked={this._showAddCameraPage}
+                addCardClicked={this._dummy.bind(this)}
                 addCardText='Add Plan'
               />
         )

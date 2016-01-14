@@ -1,34 +1,44 @@
 import React, { Component } from 'react'
+import '../styles/LabelList.less'
 
 export default class LabelList extends Component {
-    // this.props.labels -> this.props.plan.devices
-    // this.props.card -> this.props.plan
+    deleteLabel(card, label) {
+        this.props.delLabelClicked(card, label);
+    }
+
+    labelMouseOver(label) {
+        var labelId = label[this.props.labelId],
+            cardId = this.props.card[this.props.cardId];
+        this.props.pie[cardId].hover(labelId);
+    }
+
+    labelMouseOut(label) {
+        var labelId = label[this.props.labelId],
+            cardId = this.props.card[this.props.cardId];
+        this.props.pie[cardId].out(labelId);
+    }
+
     render() {
         return (
-            <ul className="VCam_menu">
+            <ul className="label_list">
                 { this.props.labels.map((element, i) => {
                     return (
                         <li
                           key={'key-tag-' + element.uid}
                           id={'tag-' + element.uid}
-                          data-color={element.color_tag}
-                          data-value={element.event_total}
-                          data-nickname={element.nickname}>
-                            <a className="VCam1">
+                          onMouseEnter={this.labelMouseOver.bind(this, element)}
+                          onMouseLeave={this.labelMouseOut.bind(this, element)}>
+                            <a>
                                 <span
-                                  id="dot1"
-                                  className="dot"
-                                  style={{ "background": element.color_tag }}></span>
-                                { element.nickname }
+                                  className="dot dot1"
+                                  style={{"background": element.color_tag}}></span>
+                                {element.nickname}
                             </a>
-                            <a
-                              data-blockui="unbindingCamera"
-                              data-url="unbindingCamera"
-                              onClick={ this.props.delLabelClicked(this.props.card, element) }>
+                            <a onClick={this.deleteLabel(this.props.card, element)}>
                                 <img
-                                  src="images/close.png"
-                                  id="close_s"
-                                  data-uid={ element.uid }>
+                                  src="static/images/vcam_close.png"
+                                  className="close_s"
+                                  data-uid={element.uid}>
                                 </img>
                             </a>
                         </li>
