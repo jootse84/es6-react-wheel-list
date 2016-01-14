@@ -1,0 +1,712 @@
+@charset "UTF-8";
+
+
+/* CSS Document */
+
+html, body{ height:100%;}
+body{ min-height:100%; position: relative;}
+
+*{ padding:0; margin:0; list-style:none; box-sizing:border-box; -webkit-box-sizing:border-box; -ms-box-sizing:border-box; -moz-box-sizing:border-box; font-family:Arial, Helvetica, sans-serif; text-decoration:none;-webkit-text-size-adjust:none/*避免ios7文字自動放大*/; font-size: 14px; color: #717171}
+a{ cursor: pointer; transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all;color: #717171;}
+h3{ width: 20.75%; font-size:1.6em;  margin-bottom: 40px; clear: both ; display: block;}
+h4{ font-size: 1.4em; color: #63c6ae; font-weight: lighter; line-height: 1.6em}
+h3 img{  height: auto;width: 1.8em; display: block;margin-right: 5px; float: left; top: 0; }
+h3 a:hover img{ opacity: 0.8}
+
+
+#header{ width:100%; background: url(../images/img_sign.png) no-repeat top right #63c6ae; height:80px; position:relative; background-size: auto 100%;}
+#header .container{ height: 100%; position: relative;}
+#header #logo{ height:100%; width:auto; position:absolute; display:block;}
+#header .menu{ float:right;height:16px; margin:32px 60px 32px 0;}
+#header .menu li {display:inline-block; margin-left:20px}
+#header .menu li a{ color:#FFF; font-size:16px; line-height:16px;  }
+#header .menu li a .list_icon{ height:24px; width:24px; display:inline-block; position:relative; top:2px; margin-right:5px;}
+section{ padding: 50px; position: relative;min-height: calc(100% - 120px);}
+.bgNotScroll{ overflow: hidden; height: calc(100% - 120px)}
+footer{  position:static; bottom:0; clear: both; text-align:center; font-size:12px; color:#333; width:100%; height:40px; line-height:40px; padding: 0; }
+.container{ width:1400px; margin:0 auto;}
+#clear{  clear: both ;}
+nav,#nav{ display: none;}
+nav{ left: -100%}
+/*Plan Management*/
+
+
+#plan_management{ width: 102.5%; margin-left: -19px; float: left}
+#plan_management>li{margin: 2.855555% 19px;  width: 320px; padding: 20px 10px;position: relative; transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all; float: left; padding: 20px 10px; height: 500px; margin-bottom: 30px }
+
+/*#plan_management>li:nth-child(4n+1){ margin-left:0 !important;}*/
+#plan_management h3{ width: 100%; text-align: center; line-height: 1.5em; clear: both; border-radius: 4px; -webkit- border-radius: 4px; margin-bottom:20px;  }
+#plan_management .VCam_menu{height: 205px; overflow-y:auto; overflow-x:hidden;  width: 100%; border-top:2px solid #b3b3b3; padding: 20px 0; color: #b3b3b3 ;line-height: 1.5em ;}
+#plan_management .VCam_menu li{ border-radius: 4px; -webkit-border-radius: 4px; display: block; text-align: center; padding: 5px;position: relative; transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all; display: block; line-height: 2em; margin: 0 auto; width: 90%;  font-size: 1.2em;}
+#plan_management .VCam_menu li a{ display: inline-block; vertical-align: middle;}
+#plan_management .VCam_menu li:hover{ background-color: #f0f0f2}
+#plan_management .VCam_menu li a .dot{ width: 1.4em; height: 1.4em; margin-right: 6px; border-radius: 50%; -webkit-border-radius: 50%; display: inline-block; position: relative; top:0.3em}
+#plan_management .VCam_menu li #close_s{ opacity: 0;  width: 20px; height: 20px; display: block; cursor: pointer; position: absolute; right: 10px; top: 50%; margin-top: -10px; transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all;}
+#dot1{ background: #63c6ae}
+#dot2{ background: rgb(248, 181, 46);}
+#dot3{ background: rgb(226, 1, 126);}
+#dot4{ background: rgb(43, 166, 225);}
+#dot5{ background: rgb(142, 194, 32);}
+#plan_management>li:hover{ box-shadow: #999 0px 0px 8px; -webkit-box-shadow: #999 0px 0px 8px}
+#close{ opacity: 0; cursor: pointer; width: 30px; height: 30px; position: absolute; top: 15px; right: 15px; transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all; display: block;}
+#close img{ width: 100%; height: 100%; display: block;}
+#plan_management>li:hover #close{ opacity: 1; box-shadow: 0; -webkit-shadow:0;}
+#plan_management .VCam_menu li:hover #close_s{ opacity: 1; box-shadow: 0; -webkit-shadow:0;}
+.binding_camera{ color: #c8c9cb; transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all; display: block; line-height: 2em; margin: 0 auto; width: 60%;  font-size: 1em; background:  url(../images/ic_bind_device.png) no-repeat 20px center; background-size: 24px;  border-radius: 4px; -webkit-border-radius: 4px; display: block;padding: 0px 5px 0px 60px; position: absolute; left: 20%; bottom: 40px}
+.binding_camera:hover{ color: #717171;   background-image:  url(../images/ic_bind_device_mod.png) ; background-color:  #f0f0f2}
+.decline{ background-color: rgba(0,0,0,0.6);   position: absolute;   height: 100%; z-index: 9;top: 0;left: 0; padding: 60px; color: #fff; text-align: center;}
+.decline img{ width:100%;height: auto;margin: 0px auto 40px; display: block;}
+.decline span{ color: #fff}
+.decline a { border-radius: 4px; -webkit-border-radius: 4px;text-align: center;width: 80%; font-size: 1.4em; border: 1px solid #fff; background: rgba(0,0,0,0.2); display: block;padding: 5px;color: #fff;margin: 0 auto;position: relative;bottom: -90px;}
+.decline a:hover{ background: rgba(0,0,0,0.9)}
+#PD{ display: block; position: absolute; width: 100%; text-align: center; top:130px; left: 0; font-size: 1.8em }
+#add_plan_box{ border: 1px dashed #fff;transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all;text-align: center; font-size: 1em; color: #c9c9cb }
+#add_plan_box a{ display: block; width: 100%; height: 100%; color: #ccc;background-image:  url(../images/btn_add_plan.png) ; background-size: 120px 120px; background-position: center 20px; background-repeat: no-repeat; padding-top: 180px}
+#add_plan_box img{ display: none;}
+#add_plan_box:hover{ color:#63c6ae; border: 1px dashed #63c6ae; box-shadow:none  !important; -webkit-box-shadow:none !important;}
+#add_plan_box:hover a {color:#63c6ae; background-image:  url(../images/btn_add_plan_mod.png) ;}
+#device_name{ width: 90%; margin-left: 5%}
+#device_name[type=text]:hover,input[type=password]:hover,textarea:hover{
+
+ outline:none;border-color:rgba(101,101,101,.75);
+ box-shadow:0 0 1px rgba(101,101,101,.75);
+ -moz-box-shadow:0 0 1px rgba(101,101,101,.75);
+ -webkit-box-shadow:0 0 1px rgba(101,101,101,.75);
+
+}
+
+#device_name[type=text]:focus,input[type=password]:focus,textarea:focus{
+
+ outline:none;border-color:rgba(101,101,101,.75);
+ box-shadow:0 0 1px rgba(101,101,101,.75);
+ -moz-box-shadow:0 0 1px rgba(101,101,101,.75);
+ -webkit-box-shadow:0 0 1px rgba(101,101,101,.75);
+
+}
+
+
+
+/*Add Plan*/
+#add_plan{}
+#add_plan>li{position: relative; transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all; margin-left:4%; width: 20.75%; float: left; padding: 0px; height: 500px; margin-bottom: 30px }
+#add_plan>li:nth-child(4n+1){ margin-left:0 !important;}
+#banner{color: #fff; height: 180px; width: 100% !important; overflow: hidden;}
+#banner span{ color: #fff; text-align: center; display: block;}
+#banner #level{font-size: 1em;line-height: 1.3em; letter-spacing: 0.05em;padding-top: 2px; }
+#banner #circle{width: 130px;border: 8px solid #fff; padding-top:28px; height: 130px;border-radius: 50%;-webkit-border-radius: 50%; margin: 10px auto; font-size: 1em}
+#banner #circle span{  font-size: 2.7em;font-weight: bold;line-height: 1.1em;}
+.add_plan_box p{ width: 78%; margin: 0 auto; font-size: 1.3em; line-height: 1.5em; margin-bottom: 30px}
+.add_plan_box ul{ width: 100%;}
+.add_plan_box ul li{ width: 100%;transition:0.5s all; -webkit-transition:0.5s all; -moz-transition:0.5s all; -ms-transition:0.5s all; }
+.add_plan_box ul li a{ display: block; color:#c8c9cb;padding: 10px 40px; font-size: 1.3em}
+.add_plan_box ul li a span{color:#c8c9cb;font-size: 1em; display: inline-block; width: 50%;}
+.add_plan_box ul li:hover a{ color: #fff;}
+.add_plan_box ul li:hover a span{color: #fff}
+#add_100 #banner{ background: #63c6ae }
+#add_100 p{ color: #63c6ae }
+#add_100 ul li:hover{ background: #63c6ae }
+#add_500 #banner{ background: #f7b52b }
+#add_500 p{ color: #f7b52b }
+#add_500 ul li:hover{ background: #f7b52b }
+#add_1000 #banner{ background: #2ba6e1 }
+#add_1000 p{ color: #2ba6e1 }
+#add_1000 ul li:hover{ background: #2ba6e1 }
+#add_5000 #banner{ background: #036db7 }
+#add_5000 p{ color: #036db7 }
+#add_5000 ul li:hover{ background: #036db7}
+.badge{ position: absolute;  right: -45px; top: 15px; background: #fff; width:150px; text-align: center; height: 30px; line-height: 30px; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg);transform: rotate(45deg); }
+#add_100 .badge{ color: #63c6ae }
+#add_500 .badge{ color:#f7b52b }
+#add_1000 .badge{ color: #2ba6e1 }
+#add_5000 .badge{ color: #036db7 }
+
+/*Check Out*/
+.order_banner{float: left; width: 25%}
+.check_out #banner{height: 400px; padding-top: 10px; position: relative;}
+.order_text{ letter-spacing: 0.04em; height: 400px; position: relative;; float: left; width: 68.75%; padding-left: 10%}
+.order_text p{ width: 90%;  font-size: 1.3em; line-height: 1.5em; margin-bottom: 50px}
+.order_text .gray{ color: #666 !important }
+.order_text .btn{ transition:0.5s all; -webkit-transition:0.5s all; -moz-transition:0.5s all; -ms-transition:0.5s all; width: 150px; padding: 10px; font-size: 1.3em;  position: absolute; bottom: 0; text-align: center; background: #63c6ae; color: #fff; border-radius: 4px; -webkit-border-radius: 4px; display: block;}
+.order_text .btn:hover{ cursor: pointer; box-shadow: #999 0px 0px 8px; -webkit-box-shadow: #999 0px 0px 8px}
+.check_out #add_1000 #banner{ background: #2ba6e1; }
+.check_out #add_1000 p{ color: #2ba6e1;}
+
+/*Account*/
+#account_wrap{position: relative; }
+#account_wrap .fixed {clear: both;position: fixed;top:80px; width: 100%;z-index: 0; padding:20px 0; background: #fff}
+#account_wrap .followWrap{ position: relative; clear: both; width: 100%; left: 0%; }
+#account_wrap  .fixed.absolute {position: absolute; top: 0 !important}
+#account_wrap h3{ padding: 20px 0}
+.account_nav { float: left; margin-bottom: 140px}
+.account_nav li{cursor: pointer; transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all; float: left; display: block; line-height: 2em; margin-right: 20px; font-size: 1.2em; border-radius: 4px; -webkit-border-radius: 4px; }
+.account_nav li a{ width:100%; height:100%;padding:0px 17px 0px 40px; display: block;}
+.account_nav .account_mail{ cursor: auto; font-size:2em; color: #63c6ae; line-height: 1em; padding-left: 0}
+.account_nav .account_nav_btn_change{ background:  url(../images/ic_change_account_pw.png) no-repeat 10px center; background-size: 24px}
+.account_nav .account_nav_btn_invoice{ background:  url(../images/ic_invoices.png) no-repeat 10px center; background-size: 24px}
+.account_nav .account_nav_btn_logout{ background:  url(../images/ic_log_out.png) no-repeat 10px center; background-size: 24px}
+.account_nav .account_nav_btn_change:hover{ background-image:  url(../images/ic_change_account_pw_mod.png); background-color:   #f0f0f2}
+.account_nav .account_nav_btn_invoice:hover{background-image:  url(../images/ic_invoices_mod.png); background-color:  #f0f0f2}
+.account_nav .account_nav_btn_logout:hover{background-image:  url(../images/ic_log_out_mod.png); background-color:  #f0f0f2}
+/*#account>li:nth-child(4n+1){ margin-left:0 !important;}*/
+#account { width: 102.5%; float: left; margin-left: -19px}
+#account #device_box{transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all; margin:2.8555555% 19px; width: 320px;float: left; padding: 20px 10px; height:390px;  }
+#account #device_box:hover{ box-shadow: #999 0px 0px 8px; -webkit-box-shadow: #999 0px 0px 8px; }
+#account #device_box #call_LB{ width: 125px; margin: 0 auto}
+#account #device_box #device_img_wrap{ cursor: pointer; display: block; width: 125px; height: 125px; margin: 0 auto 20px;}
+#account #device_box #device_img{ display: block; width: 125px; height: 125px; border-radius: 50%; -webkit-border-radius:50%; border:8px solid #63c6ae; margin: 20px auto}
+#account #device_box h3{ width: 100%; text-align: center; line-height: 1.5em; clear: both; border-radius: 4px; -webkit- border-radius: 4px; margin-bottom:20px;  }
+#account #device_box .device_box_nav{ width: 100%; border-top:2px solid #b3b3b3; padding: 20px 0; color: #b3b3b3 ;line-height: 1.5em }
+#account #device_box .device_box_nav li{ padding:5px;transition:0.8s all; -webkit-transition:0.8s all; -moz-transition:0.8s all; -ms-transition:0.8s all; display: block; line-height: 2em; margin: 0 auto; width: 74%;  font-size: 1.2em;}
+#account #device_box .device_box_nav li a{  border-radius: 4px; -webkit-border-radius: 4px; display: block;padding: 0px 5px 0px 40px;}
+#account #device_box .device_box_nav .plan_name{  color: #c8c9cb;  background:  url(../images/ic_plan.png) no-repeat 10px center; background-size: 24px}
+#account #device_box .device_box_nav .plan_name:hover{ color: #717171;  color: #717171;  color: #717171;   background-image:  url(../images/ic_plan_mod.png) ; background-color:   #f0f0f2}
+#account #device_box .device_box_nav .plan_management{  color: #c8c9cb;  background:  url(../images/ic_manage_plan.png) no-repeat 10px center; background-size: 24px}
+#account #device_box .device_box_nav .plan_management:hover {
+    color: #717171;
+    background-image:  url(../images/ic_manage_plan_mod.png);
+    background-color:   #f0f0f2
+}
+#account #device_box .device_box_nav .plan_remove{ color: #c8c9cb;   background:  url(../images/ic_remove_device.png) no-repeat 10px center; background-size: 24px}
+#account #device_box .device_box_nav li:hover .plan_remove {
+    background-image:  url(../images/ic_remove_device_mod.png);
+}
+#account #device_box .device_box_nav .plan_remove:hover{ color: #717171;   background-image:  url(../images/ic_remove_m.png) ; background-color:   #f0f0f2}
+#device_name{ width: 90%; text-align: center; line-height: 1.5em; clear: both; border-radius: 4px; -webkit- border-radius: 4px; margin: 0 auto 20px; font-size:1.6em;  clear: both ; display: block; border: none;}
+#account #device_box #device_name[type=text]:focus,input[type=password]:focus,textarea:focus{
+
+ outline:none;border-color:rgba(101,101,101,.75);
+ box-shadow:0 0 1px rgba(101,101,101,.75);
+ -moz-box-shadow:0 0 1px rgba(101,101,101,.75);
+ -webkit-box-shadow:0 0 1px rgba(101,101,101,.75);
+
+}
+.checkinfo #checkRemove[type=checkbox],.checkinfo #checkRemove[type=checkbox]:focus,.checkinfo #terminationCheck[type=checkbox],.checkinfo #terminationCheck[type=checkbox]:focus,.checkinfo #unbindingCheck[type=checkbox],.checkinfo #unbindingCheck[type=checkbox]:focus,input[type=checkbox] {
+ outline:none;border-color:rgba(255,255,255,.75);
+ box-shadow:0 0 0 rgba(255,255,255,.75);
+ -moz-box-shadow:0 0 0 rgba(255,255,255,.75);
+ -webkit-box-shadow:0 0 0 rgba(255,255,255,.75);
+
+}
+
+
+/*Purchase*/
+.purchaseh4{ width: 84%; margin: 0 8%}
+.purchase_form_cato{width: 84%; margin: 0 8% 3px;padding:10px;  line-height: 1.5em; background:#63c6ae !important;  color: #fff !important; -webkit-box-shadow: #ddd 0px 5px 3px; box-shadow: #ddd 0px 5px 3px; }
+.purchase_form_cato span{display: inline-block;color: #fff;line-height: 1.5em;}
+.purchase_form{ width: 84%; margin: 0px 8% 20px}
+.purchase_form li{ line-height: 1.5em; padding:10px; background: #fff}
+.purchase_form li:nth-child(even){ background: #e9e9ec}
+.purchase_form li span{ display: inline-block;}
+#number{ width: 25%; float: left;}
+#date{ width: 25%; float: left;}
+#type{ width: 30%; float: left;}
+#total{ width: 20%; float: left;}
+
+
+
+
+/*Pie chart*/
+
+.piechart-flatmin {position: relative;width: 140px; margin:0 auto;}
+.piechart-flatmin .piehole {position: absolute;width: 120px;height:120px;top: 10px;z-index: 2;border-radius: 50%;left: 10px;overflow: hidden;text-align: center; background: #fff !important}
+.piehole .piehole-text {font-weight: 300;display: none;position: absolute;left: 15%;top: 30%;width: 70%;}
+.piechart-flatmin.m .piehole-text {font-size: 70%;}
+.piechart-flatmin.s .piehole-text {top: 20%; font-size:100%;}
+.piechart-flatmin .piehole-text p {line-height: 1;margin: 0;font-weight: 300;}
+.piehole-text .flatmin-percentage {font-size: 4em;display: none;}
+.piehole-text .flatmin-percentage:after {content: '%';font-size: 0.4em;vertical-align: top;line-height: 1.5;display: none;}
+.piehole-text .flatmin-value {font-size: 1.2em;font-weight: 400;}
+.piehole-text .flatmin-value span{ font-size: 1.3em; display: block; text-align: center; color: #c6c7c9}
+.piehole-text .flatmin-value .circle_data{ border-bottom: 1px solid #c6c7c9; padding-bottom: 3px}
+.piehole-text .flatmin-value .circle_value{ font-size: 0.9em; line-height: 1.5em}
+.piechart-flatmin.m .piehole-text .flatmin-title, .piechart-flatmin.m .piehole-text .flatmin-value, .piechart-flatmin.s .piehole-text .flatmin-title, .piechart-flatmin.s .piehole-text .flatmin-value {font-size: 2em;}
+.piechart-flatmin.s .piehole-text .flatmin-percentage {font-size: 3em;}
+.piechart-flatmin .ratio {padding-top: 100%;}
+.piechart-flatmin .sector {width: 100%;height: 100%;top: 0;left: 0;position: absolute;pointer-events: none;}
+.sector.hover .sector-s {}
+.sector-f {pointer-events: none;position: absolute;width: 100%;height: 100%;top: 0;border-radius: 50%;left: 0;}
+.sector-s {cursor: default;pointer-events: auto;position: absolute;border-radius: 50%;width: 100%;height: 100%;top: 0;left: 0;}
+#chart {padding: 1em;margin: auto;margin-bottom: 20px}
+
+
+/* BlockUI */
+.blockMsg { width: 1400px !important; margin-left: -700px !important; height: 100%; }
+.blockwrap{ height: 100%; width: 100%}
+.blockwrap_frame{ height: 100%; width: 100%}
+.blockwrap_frame:before {  vertical-align: middle; display: inline-block; height: 100%; content:"";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 100%;
+  margin-left:-1em;
+  font-size:0px;}
+.blockwrap .content{ display: inline-block; height: 100%; vertical-align: middle;}
+.blockwrap h4{ font-size: 2em; line-height: 1.5em; color: #fff; text-align: center;margin-bottom: 40px;}
+.blockwrap p{ font-size: 1em; line-height: 1.3em; text-align: center; color: #fff; font-weight: lighter;}
+.blockTitle{ margin-bottom: 20px !important; margin-top: 5% !important}
+#blockClose {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    background-size: 100%;
+    z-index: 9999 !important;
+    background-image: url('../images/btn_lightbox_close.png');
+}
+#blockClose:hover {
+    background-image: url('../images/btn_lightbox_close_mod.png');
+}
+#changePwd .content { width: 250px; margin: 10% auto}
+#changePwd .content input { width: 100%; color: #fff; line-height: 1.5em; padding: 5px 10px; color: #fff; border-radius: 4px; -webkit-border-radius:4px; border: 1px solid #fff; background: transparent;margin-bottom: 15px}
+#changePwd { width: 100%; padding-top: 30px;}
+#changePwd input { width: 100%; padding: 5px;  line-height: 1.5em; margin-bottom: 15PX; border-radius: 4px; -webkit-border-radius: 4px; background: transparent;; border: 1PX solid #FFF; color: #FFF }
+#changePwd .blockBtn{background: #63c6ae !important;}
+#changePwdOK { display: inline-block; height: 100%; vertical-align: middle;}
+#changePwdOK .content{ display: inline-block; height: 100%; vertical-align: middle; padding-top: 30%;}
+#changePwdOK .blockBtn{background: #63c6ae !important;}
+#changePwd #showError,#changePwd #showError2,#changePwd #showError3{ margin-bottom: 10px; color: #fff; font-size: 0.8em; text-align: left; display: block;}
+#changePwd .pwdError{ color: #e50112 !important}
+.PwdRed{ color: #e50112 !important}
+.checkinfo{ font-size: 0.8em; margin: 50px auto 0}
+.checkinfo #checkRemove{ margin-right: 5px;}
+#removeDevice {  vertical-align: middle; display: table; height: 100%; width: 100%}
+#removeDevice .content{ vertical-align: middle; display: table-cell;}
+#removeDevice .blockBtn{ width: 210px; margin: 50px auto;  background: transparent !important; border: none; box-shadow: none;}
+.checkinfo #checkout_page{ margin-right: 5px;}
+#checkout_page {  vertical-align: middle; display: table; height: 100%; width: 100%;}
+#checkout_page .content{ vertical-align: middle; display: table-cell;}
+#checkout_page .blockBtn{background: #63c6ae !important;transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all; }
+#checkout_page .blockBtn:hover{ opacity: 0.7}
+#binding_page,#bindingCamera{ padding-top: 30px;}
+#binding_page .content ul{ width: 100%; float: left; top: 150px; position: relative;}
+#binding_page .content ul li{ width:33.3%; text-align: left; transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all;  padding: 15px; margin-bottom: 10px; float: left; display: block; color: #fff}
+#binding_page .content ul li a{ display: block; width: 100%; height: 100%; float: left;}
+#binding_page .content ul li img{ display: block; float: left; margin-right: 20px}
+#binding_page .content ul li p{ text-align: left; display: block; width: 60%; float: left; font-size: 2em; line-height: 85px; height: 65px}
+#binding_page .content ul li #code{ font-size:12px !important; color: #Fff; display: block; width: 60%; float: left;}
+#binding_page .content ul li:hover{ background-color: rgba(0,0,0,0.6)}
+#binding_page .blockTitle { top:0px; margin-bottom: 20px; position: fixed; width: 1400px;}
+#binding_page h5{ margin-bottom: -15px;font-weight: lighter; position: relative; top: 20px;}
+#bindingCam_info{ width: 100%; }
+#bindingCam_content{  color: #fff}
+#bindingCam_info img{ display: block; margin: 25px auto}
+#bindingCam_info p{ text-align: center; font-size: 1em; line-height: 1.5em }
+#bindingCam_info #code{ font-size: 12px; color: #FFF; margin-bottom: 40px;  text-align: center; display: block;}
+#unbindingCamera .blockBtn{ width: 210px; margin: 50px auto;  background: transparent !important; border: none; box-shadow: none;}
+#bindingCam_info #bindingBtn_wrap{  width: 210px; margin: 20px auto;  background: transparent !important; border: none; box-shadow: none;}
+#unbindingCamera {  vertical-align: middle; display: table; height: 100%; width: 100%}
+#unbindingCamera .content{ vertical-align: middle; display: table-cell;}
+.checkinfo #unbindingCheck{ margin-right: 5px;}
+#unbindingCamera .content>div{ cursor: pointer;  width: 210px; margin: 50px auto;   }
+#unbindingCamera #cancel{ margin:0;transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all; display: block; float: left; width: 80px; margin-right: 10px; background: transparent !important; border: 1px solid #fff; border-radius: 4px; box-shadow: 2px 2px 2px #444444; color: #fff}
+#cancel{transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all; display: block; float: left; width: 80px; margin-right: 10px; background: transparent !important; border: 1px solid #fff; border-radius: 4px; box-shadow: 2px 2px 2px #444444; color: #fff}
+#cancel a{ color: #fff}
+#removeBtn{transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all; display: block; float: left; background: #666; color: #999; width: 120px; border-radius: 4px; box-shadow: 2px 2px 2px #444444;}
+.removeBtnOn{ background-color: #f20 !important; color: #fff !important;}
+#unbindingBtn{transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all; height: 40px; line-height: 40px; display: block; float: left; background: #666; color: #999; width: 120px; border-radius: 4px; box-shadow: 2px 2px 2px #444444;}
+.unbindingBtnOn{ background-color: #f20 !important; color: #fff !important;}
+#termination {  vertical-align: middle; display: table; height: 100%; width: 100%}
+#termination .content{ vertical-align: middle; display: table-cell;}
+#termination .content ul{ width:260px; margin: 0 auto; margin-top: 20px}
+#termination .content ul li{ text-align: left; list-style: outside disc; color: #fff; line-height: 1.5em; margin-bottom: 20px}
+#termination .content ul li span{ color: #fff}
+#termination .content>div{ cursor: pointer;  margin: 0px auto;  width: 210px;}
+#termination .blockBtn{ border: 1px solid #fff;   margin: 50px 10px 50px 0;background: transparent !important;  box-shadow: none; }
+.checkinfo #terminationCheck{ margin-right: 5px;}
+#terminationBtn{ margin: 50px auto; transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all; height: 40px; line-height: 40px; display: block; float: left; background: #666; color: #999; width: 120px; border-radius: 4px; box-shadow: 2px 2px 2px #444444;}
+.terminationBtnOn{ background-color: #f20 !important; color: #fff !important;}
+#cancel:hover{ opacity: 0.5}
+#bindingCam_info #bindingCam_name{line-height: 70px; font-size: 2em}
+#bindingCam_info .blockBtn{ width: 210px; margin: 50px auto;  background: transparent !important; border: none; box-shadow: none;}
+#bindingCam_info #bindingBtn{transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all; display: block; float: left; background: #63c6ae !important; color: #fff !important; width: 120px; border-radius: 4px; }
+#bindingCam_info #bindingBtn:hover{ opacity: 0.7}
+#bindingCam_info #cancel{transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all; display: block; float: left; width: 80px; margin-right: 10px; background: transparent !important; border: 1px solid #fff; border-radius: 4px; color: #fff}
+#bindingCam_info #cancel a,#bindingCam_info #bindingBtn a{ color: #fff; display: block; width: 100%; height: 100%}
+.blockBtn a{ color: #fff}
+#cameraColor{ padding-top: 30px}
+#cameraColor .blockBtn,#deviceColor .blockBtn{transition:0.4s all; -webkit-transition:0.4s all; -moz-transition:0.4s all; -ms-transition:0.4s all;background: #63c6ae !important;}
+#cameraColor .blockBtn{ float: left; margin-top: 60px }
+#cameraColorBtn_wrap{ width:190px; margin: 0 auto;}
+#cameraColorBtn_wrap .blockBtn2{ margin-right: 10px; margin-top: 60px;}
+#cameraColor .blockBtn:hover{ opacity: 0.7}
+label{ color: #fff}
+#deviceColor{ padding-top: 30px}
+
+
+
+
+
+/* ---------------------- #1- Large desktop ----------------------*/
+@media (min-width: 1920) {/*1280px */
+#binding_page .content ul li{ width: 33.3%; top: 150px; position: relative;}
+
+
+}
+
+
+
+
+
+
+/* #1- Big desktop */
+@media (min-width: 1281px) and (max-width:1919px){
+
+h3{ margin-bottom:30px; width: 50%}
+nav,#nav{ display: none}
+.container{ width:1240px; margin:0 auto}
+
+/*Plan management*/
+#plan_management{ margin-left: -10px; width: 100%}
+#plan_management>li{height: 520px;margin: 2.855555% 10px;width: 286px; }
+.binding_camera{ width:60%; left: 20%; padding-left: 55PX}
+#PD{ top:115px; font-size: 1.7em }
+#account { margin-left: -10px; width: 100%}
+#account #device_box{height: 520px;margin: 2.855555% 10px; width: 286px;}
+
+/*Pie Chart*/
+.piechart-flatmin{ width: 140px !important; }
+.piehole .piehole-text{ left:10% !important; width: 80% !important;}
+.piechart-flatmin.s .piehole-text {top: 25PX !important;}
+
+/* BlockUI */
+.blockMsg{ width: 1240px !important; margin-left: -620px !important;}
+#binding_page .content ul li{ width: 33.3%}
+#picker{ margin-bottom: 40px !important}
+.colorpicker{ margin-top: 20px !important}
+#binding_page .blockTitle {top: 20px; width: 1240PX;}
+#cameraColor .blockBtn{ margin-top: 60px}
+
+
+}
+
+
+
+
+
+
+/* ---------------------- #2- Regular sized laptops ---------------------- */
+@media (min-width: 980px) and (max-width: 1280px) {
+
+h3{ margin-bottom:30px;width: 50%}
+.container{ width:900px; margin:0 auto}
+
+/*Plan management*/
+#plan_management>li{ width:27.5%; height:500px }
+/*#plan_management>li:nth-child(3n+1){ margin-left: 0 !important}*/
+#plan_management .VCam_menu li{ width:86%}
+.binding_camera{width: 68%;left: 16%;font-size: 1em;}
+.decline{ padding:33px 60px}
+.decline img{ margin-bottom: 60px; width: 95%}
+#PD{ font-size:1.2em; top: 77px}
+#add_plan_box a{ font-size: 2em}
+.binding_camera{    padding: 0px 5px 0px 50px;background: url(../images/ic_bind_device.png) no-repeat 10px center 100%;}
+
+
+/*Add Plan*/
+#add_plan>li{  width:29.63%; height:460px }
+#add_plan>li:nth-child(3n+1){ margin-left: 0 !important}
+
+/*Account*/
+.account_nav { float: left;  margin-bottom: 80px;}
+#account #device_box{ width: 27.5%}
+#account #device_box .device_box_nav li{ width: 86%}
+/*#account>li:nth-child(3n+1){ margin-left: 0 !important}*/
+
+
+
+/*Pie Chart*/
+.piechart-flatmin{ width: 140px !important; margin: 0 auto;}
+.piechart-flatmin.s .piehole-text { top:19% !important;font-size: 100%;}
+
+/* BlockUI */
+.blockMsg{ width: 900px !important; margin-left: -450px !important;}
+.colorpicker{    margin-top: 0px !important;}
+#picker{ margin-bottom: 20px !important}
+.blockTitle{ margin-bottom: 20px !important;}
+#binding_page .content ul li{ width: 50%}
+.blockwrap { padding-bottom: 0%; padding-top: 60PX  !important;}
+#bindingCam_info img{ margin-bottom: 5px}
+#checkout_page .content { position: relative; top: 0%}
+#binding_page .blockTitle{ top: 48px; width: 900px}
+#changePwdOK .content{ padding-top: 23%}
+#deviceColor .blockBtn{ margin: 20px auto !important}
+#cameraColor .blockName { height: 25px !important; line-height: 25px !important; font-size: 20px !important }
+#cameraColor .blockName .blockCircle{ width:20px !important; height: 20px !important;}
+#cameraColorBtn_wrap .blockBtn{ margin: 20px auto !important}
+#cameraColorBtn_wrap .blockBtn2{ margin-top: 20px !important}
+
+
+
+}
+
+
+
+
+
+/* ----------------------#3- Portrait tablet to landscape and desktop ---------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+
+h3{ width: 50%}
+.container{ width:700px; margin:0 auto}
+#header .menu{ float:right;height:30px; margin:22px 60px 32px 0;}
+#header .menu li {display:inline-block; margin-right:10px; width: 24px; height:27px; overflow: hidden ;}
+#header .menu li a .list_icon{ height: 24px; width: 24px;}
+#header .menu li a { width: 100%;display: block; height: 27px}
+/*Plan management*/
+#plan_management{ width: 100%; margin-left: 0}
+#plan_management>li{ width:44%; height:520px }
+/*#plan_management>li:nth-child(2n+1){ margin-left: 0 !important}*/
+#plan_management .VCam_menu li{ width:86%}
+.binding_camera{ width: 66%; left: 16%; font-size: 1.2em;}
+.decline{ padding:33px 80px}
+.decline img{ margin-bottom:50px}
+#PD{ font-size:1.5em; top: 88px}
+.decline a{ bottom: -60px}
+#add_plan_box a{ font-size: 2em}
+#binding_page .blockTitle{ width: 700px; top: 20PX}
+
+
+/*Add Plan*/
+#add_plan>li{  width:47.22%; height:490px }
+#add_plan>li:nth-child(2n+1){ margin-left: 0 !important}
+
+
+/*Check Out*/
+.order_banner{ width: 35%; margin-bottom: 50px}
+.check_out #banner{}
+.order_text{  width: 65%;  padding-left: 5%}
+.order_text p{ font-size: 16px; line-height: 1.5em; width: 100%; }
+
+
+
+/*Account*/
+#account{ width: 100%; margin-left: 0}
+.account_nav { float: left;  margin-bottom: 80px;}
+#account #device_box{ width:45.7%;height:410px }
+#account #device_box .device_box_nav li{ width: 58%}
+#account>li:nth-child(2n+1){ margin-left: 0 !important}
+.account_nav .account_mail{ float: none; margin-bottom: 10px}
+.account_nav .account_nav_btn_change{ background-position: 10px center; padding-left: 40px}
+.account_nav .account_nav_btn_invoice{background-position: 10px center; padding-left: 40px}
+.account_nav .account_nav_btn_logout{background-position: 10px center; padding-left: 40px}
+.account_nav li a{ width:100%; height:100%;padding: 5px 17px 5px 0px; display: block;}
+
+
+/* BlockUI */
+.blockMsg{ width: 700px !important; margin-left: -350px !important;}
+.colorpicker{ margin-top:20px !important;}
+#picker{ margin-bottom: 10px !important}
+.blockTitle{ margin-bottom: 20px}
+#binding_page .content ul li{ width: 100%}
+#checkout_page .content { position: relative; }
+#deviceColor .blockBtn{ margin: 20px auto !important}
+#cameraColor .blockName { height: 25px !important; line-height: 25px !important; font-size: 20px !important }
+#cameraColor .blockName .blockCircle{ width:20px !important; height: 20px !important;}
+#cameraColorBtn_wrap .blockBtn{ margin: 20px auto !important}
+#cameraColorBtn_wrap .blockBtn2{ margin-top: 20px !important}
+
+
+
+/*Pie Chart*/
+.piechart-flatmin{ width: 140px !important; margin: 0 auto;}
+.piechart-flatmin.s .piehole-text{ font-size: 100% !important;top:26px !important;}
+
+
+
+}
+
+/* ----------------------#4- Landscape phone to portrait tablet ---------------------- */
+@media (min-width: 481px) and (max-width: 767px) {
+
+h3{ width: 100%; clear: both}
+#header{ background-image: none; position: fixed; z-index: 998}
+#header #logo{ position: relative;; margin: 0 auto}
+#header .menu{ display: none;}
+section{  padding: 120px 0px 50px }
+.container{ width:100%; padding: 0 10%; margin:0 auto}
+nav,#nav{ display: block;}
+#nav{ position: fixed; width: 30px;z-index: 999; top: 30px; left:30px; cursor: pointer;}
+#nav span{ display: block; height: 5px; margin-bottom: 3px; background: #fff}
+nav{ background: rgba(0,0,0,0.6); width:70%; min-width: 300px; left: -100%; padding: 30px 0; position:  fixed; top: 80px;  z-index: 999; height: 100%; display: none;}
+nav #nav_account{ text-align: center; font-size: 1.5em; border-bottom: 1px solid #ccc; color: #fff; padding: 30px}
+nav ul{ width: 100%; padding: 30px}
+nav ul li a{ color:#FFF; font-size:20px; line-height:3em; transition:0.2s all; -webkit-transition:0.2s all; -moz-transition:0.2s all; -ms-transition:0.2s all;  }
+nav ul li a .list_icon{ height:24px; width:24px; display:inline-block; position:relative; top:5px; margin-right:20px;}
+nav #nav_account .list_icon{  max-width: 100px;width: 30%; height: auto; display: block; margin:  0 auto 20px;}
+nav ul li a:hover{  color:#63c6ae }
+
+/*Plan management*/
+#plan_management{ width: 100%; margin-left: 0}
+#plan_management>li{ width:100%; padding-bottom: 80px ;margin-left: 0% !important}
+#plan_management .VCam_menu li{ width:86%}
+.binding_camera{ width: 250px;left: 50%;margin-left: -125px; font-size: 20px; background-position: 30px center; padding-left: 70px;}
+ #binding_page .content ul li{ padding: 10px; width: 100%}
+.decline{ padding:33px 60px; font-size: 1.3em; width: 100%}
+.decline img{ margin-bottom:50px; width: 210px; height:210px}
+#PD{ font-size:26px; top: 105px}
+#add_plan_box a{ font-size: 2em}
+
+/*Add Plan*/
+#add_plan>li{ width:100%; height:440px ;margin-left: 0% !important}
+
+
+/*Check Out*/
+.order_banner{float: none; width: 100%; margin-bottom: 50px}
+.check_out #banner{height: 200px}
+.order_text{ float: none; width: 100%; height: inherit; padding: 0}
+.order_text p{ font-size: 16px; line-height: 1.5em; width: 100%; }
+.order_text .btn{ position: inherit; width: 100%}
+
+
+/*Purchase*/
+.purchaseh4{ width: 100%; margin: 0}
+.purchase_form_cato{ width: 100%; margin: 0 0 3px}
+.purchase_form_cato span {font-size: 0.9em; line-height: 1.3em; vertical-align: middle;}
+.purchase_form{ width: 100%; margin: 0 0 40px}
+.purchase_form span{ font-size: 0.9em; line-height: 1.3em; vertical-align: middle;}
+#number{ width: 20%}
+#date{ width: 25%}
+#type{ width: 35%}
+
+/*Account*/
+.account_nav { float: left;  margin-bottom: 80px;}
+#account_wrap .fixed {clear: both;position: fixed;top: 80px !important;left: 0%; width: 100%;padding-left: 10%; background-color: rgba(255,255,255,0.5);}
+
+#account{ width: 100%; margin-left: 0}
+#account #device_box{  width:100%; height:360px ;margin-left: 0% !important}
+#account #device_box .device_box_nav li{ width: 86%; max-width: 190px}
+.account_nav li a{ width:100%; height:100%;padding: 10px 17px 10px 10px; }
+.account_nav .account_mail{ float: none; margin-bottom: 30px}
+.account_nav .account_nav_btn_change{ background-position:  10px center; padding-left:30px}
+.account_nav .account_nav_btn_change a{ font-size: 1.1em}
+.account_nav .account_nav_btn_invoice{background-position:  10px center; padding-left:30px}
+.account_nav .account_nav_btn_invoice a{ font-size: 1.1em}
+.account_nav .account_nav_btn_logout{background-position:  10px center; padding-left:30px}
+.account_nav .account_nav_btn_logout a{ font-size: 1.1em}
+
+/* BlockUI */
+.blockMsg{ width:80% !important; left: 10% !important; margin-left: 0 !important}
+.blockTitle{ width:  100% !important}
+#binding_page .blockTitle{TOP: 23PX; width: 80% !important}
+
+/* Color Picker */
+.colorpicker{ margin-top:20px !important}
+#picker{ margin-bottom: 50px !important}
+.colorpicker .blockName{ font-size: 30px  !important; }
+.colorpicker .blockName .blockCircle{ width: 30px !important; height: 30px !important}
+.blockTitle{ margin-bottom: 20px !important}
+#cameraColor .blockName .blockVal{ font-size: 30px !important; line-height: 40px; height: 40px}
+#binding_page .content ul li #code{ font-size:12px !important; color: #Fff; display: block; width: 60%; float: left;}
+#changePwdOK .content{ padding-top: 30%}
+
+
+
+/*Pie Chart*/
+.piechart-flatmin{ width: 140px !important; margin: 0 auto}
+.piechart-flatmin.m .piehole-text{ font-size: 170% !important; top: 20% !important;}
+.piechart-flatmin.s .piehole-text{ font-size: 90% !important; top: 20% !important;}
+
+
+}
+
+/* ----------------------#5- Landscape phones and down ---------------------- */
+@media (max-width: 480px) {
+h3{ width: 100%;}
+#header{ background-image: none; position: fixed; z-index: 998; height: 60px;}
+#header #logo{ position: relative;; margin: 0 auto}
+#header .menu{ display: none;}
+section{  padding: 120px 0px 50px; }
+.bgNotScroll{ overflow: hidden; height: calc(100% - 100px)}
+footer{ padding: 0}
+.container{ width:100%; margin:0 auto; padding: 0 10%}
+nav,#nav{ display: block;}
+#nav{ position: fixed; width: 30px;z-index: 999; top: 20px; left:20px;cursor: pointer;}
+#nav span{ display: block; height: 5px; margin-bottom: 3px; background: #fff}
+nav{ background: rgba(0,0,0,0.6) url(../images/img_sign.png) no-repeat right top;  left: -100%;   background-size: 70px; width:70%; min-width: 260px; padding: 30px 0; position: fixed; top: 60px; z-index: 999; height: 100%; display: none;}
+nav #nav_account{ text-align: center; font-size: 1.5em; border-bottom: 1px solid #ccc; color: #fff; padding: 30px}
+nav ul{ width: 100%; padding: 30px}
+nav ul li a{ color:#FFF; font-size:18px; line-height:3em;  transition:0.2s all; -webkit-transition:0.2s all; -moz-transition:0.2s all; -ms-transition:0.2s all;  }
+nav ul li a .list_icon{ height:24px; width:24px; display:inline-block; position:relative; top:5px; margin-right:20px;}
+nav #nav_account .list_icon{ width: 30%; max-width: 100px; height: auto; display: block; margin:  0 auto 20px;}
+nav ul li a:hover{  color:#63c6ae }
+
+
+/*Plan management*/
+#plan_management{ width: 100%; margin-left: 0}
+#plan_management>li{ width:100%;  padding-bottom: 50px ;margin-left: 0% !important}
+#plan_management .VCam_menu li{ width:86%}
+.binding_camera{ width: 250px; left: 50%; font-size: 16px; text-align: center; background-position: 50px center; padding-left: 30px;  margin-left: -125px;}
+.decline{ padding:33px 70px}
+.decline img{ margin-bottom:50px; width: 146px; height: 146px}
+#PD{ font-size:20px; top: 82px}
+#add_plan_box a{ font-size: 2em}
+
+/*Purchase*/
+.purchaseh4{ width: 100%; margin: 0}
+.purchase_form_cato{ width: 100%; margin: 0 0 3px}
+.purchase_form_cato span {font-size: 0.9em; line-height: 1.3em; vertical-align: middle;}
+.purchase_form{ width: 100%; margin: 0 0 40px}
+.purchase_form span{ font-size: 0.9em; line-height: 1.3em; vertical-align: middle;}
+#number{ width: 20%}
+#date{ width: 30%}
+
+/*Check Out*/
+.order_banner{float: none; width: 100%; margin-bottom: 50px}
+.check_out #banner{height: 200px}
+.order_text{ float: none; width: 100%; height: inherit; padding: 0; }
+.order_text p{ font-size: 16px; line-height: 1.5em; width: 100%}
+.order_text .btn{ position: inherit; width: 100%}
+
+
+/*Add Plan*/
+#add_plan>li{ width:100%; height:440px ;margin-left: 0% !important}
+
+/*Account*/
+#account_wrap .fixed {clear: both;position: fixed;top: 60px;left: 0%; width: 100%;padding-left: 10%; background-color: rgba(255,255,255,0.5);}
+.account_nav { float: left;  margin-bottom: 80px;}
+#account{ width: 100%; margin-left: 0}
+#account #device_box{  width:100%; height:440px ;margin-left: 0% !important}
+#account #device_box .device_box_nav li{ width: 86% ;max-width: 190px}
+.account_nav li:last-child{  margin-bottom: 10px}
+.account_nav li a{ width:100%; height:100%;padding: 5px 17px 5px 10px; font-size: 1em }
+.account_nav .account_mail{ float: none;}
+.account_nav .account_nav_btn_change{ background-position:  15px center; padding-left:35px; margin-bottom: 0}
+
+.account_nav .account_nav_btn_invoice{background-position:  18px center; padding-left:35px}
+.account_nav .account_nav_btn_logout{background-position:  15px center; padding-left:35px}
+
+
+
+/* BlockUI */
+.blockMsg{ width:80% !important; left: 10% !important; margin-left: 0 !important}
+#binding_page .blockTitle{ width: 80%; top: 30PX}
+
+
+/* Color Picker */
+.colorpicker{ margin-top: 10px !important}
+#picker{ margin-bottom: 0px !important; margin-top: -10px; width: 250px; float: none !important;}
+#deviceColor .blockBtn{ margin-top: 20px !important; }
+#cameraColor .blockName { font-size: 30px  !important; }
+#cameraColor .blockName .blockCircle{ width: 30px  !important; height: 30px  !important}
+#cameraColor .blockBtn{  margin-top: 60px }
+.blockTitle{ margin-bottom: 20px !important; margin-top: 5% !important}
+#blockClose{ top: 15px !important; right: 15px !important; z-index: 99}
+#changePwd .content{ margin-top: 40%}
+#binding_page .content ul li{ padding: 10px; width: 100%}
+#binding_page .content ul li p{ text-align: left; display: block; width: 60%; float: left; font-size: 1.7em; line-height: 70px; height: 50px}
+#binding_page .content ul li #code{ font-size:12px !important; color: #Fff; display: block; width: 60%; float: left;}
+#changePwdOK .content{ padding-top: 50%}
+#binding_page .content ul li img{ margin-right: 10px; width:35%;  }
+.piechart-flatmin .piehole-text .flatmin-value{font-size: 1.8em}
+#chart{ max-width: 180px}
+
+.blockwrap h4{ margin-top: 10%}
+.decline{ width: 100%}
+
+
+/* Pie Chart */
+.piechart-flatmin .piehole-text{ font-size: 90% !important; top: 19% !important;}
+
+}
