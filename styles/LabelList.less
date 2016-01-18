@@ -11,7 +11,7 @@
         border-radius: 4px;
         -webkit-border-radius: 4px;
         display: block;
-        text-align: center;
+        text-align: left;
         padding: 5px;
         position: relative;
         transition: 0.8s all;
@@ -22,7 +22,7 @@
         line-height: 2em;
         margin: 0 auto;
         width: 90%;
-        font-size: 1.2em;
+        font-size: 1.1em;
         a {
             display: inline-block;
             vertical-align: middle;
@@ -74,6 +74,19 @@
         }
         .dot5 {
             background: rgb(142, 194, 32);
+        }
+        @media (min-width: 980px) and (max-width: 1280px) {
+            width: 86%;
+            font-size: 95%;
+        }
+        @media (min-width: 768px) and (max-width: 979px) {
+            width: 86%;
+            font-size: 95%;
+        }
+        @media (min-width: 0px) and (max-width: 767px) {
+            width: 86%;
+            font-size: 105%;
+            text-align: center;
         }
     }
 }

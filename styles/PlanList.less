@@ -1,8 +1,11 @@
 #card-list {
-    width: 102.5%;
     margin-left: -19px;
     float: left;
     list-style-type: none;
+    @media (min-width: 1281px) and (max-width:1919px) {
+        margin-left: -10px;
+        width: 100%
+    }
     p {
         width: 78%;
         margin: 0 auto;
@@ -31,6 +34,24 @@
                 box-shadow: 0;
                 -webkit-shadow: 0;
             }
+        }
+        @media (min-width: 1281px) and (max-width:1919px) {
+            height: 520px;
+            margin: 2.855555% 10px;
+            width: 286px;
+        }
+        @media (min-width: 980px) and (max-width: 1280px) {
+            width: 27.5%;
+            height: 500px;
+        }
+        @media (min-width: 768px) and (max-width: 979px) {
+            width: 44%;
+            height: 520px;
+        }
+        @media (min-width: 481px) and (max-width: 767px) {
+            width: 100%;
+            padding-bottom: 80px;
+            margin-left: 0% !important;
         }
     }
     h3 {
