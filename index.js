@@ -87,6 +87,7 @@ class PlanList extends Component {
                 cardId='contract_id'
                 labelsId='devices'
                 labelId='uid'
+		nameId='nickname'
                 titleChanged={this._dummy.bind(this)}
                 delLabelClicked={this._dummy.bind(this)}
                 addLabelClicked={this._dummy.bind(this)}

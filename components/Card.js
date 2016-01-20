@@ -24,6 +24,7 @@ export default class Card extends Component {
                     labelId={this.props.labelId}
                     plan={this.props.card}
                     cardId={this.props.card[this.props.cardId]}
+                    cardName={this.props.cardName}
                     pie={this.state.pie}
                     titleChanged={this.props.titleChanged} />
                 <LabelList

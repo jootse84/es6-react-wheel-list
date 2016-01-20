@@ -5,6 +5,15 @@ import PieChart from './PieChart'
 import '../styles/PieArea.less'
 
 export default class PieArea extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            cardName: props.cardName
+        }
+        this.updateTitle = this.updateTitle.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+    }
+
     componentDidMount() {
         var dataset = {
                 id: [],
@@ -43,10 +52,16 @@ export default class PieArea extends Component {
 
     updateTitle() {
         this.props.titleChanged(
-            $(this.refs['input-text-' + this.props.cardId]).value,
-            this.props.name,
-            this.props.cardId
+          this.state.cardName,
+          this.props.cardName,
+          this.props.cardId
         );
+    }
+
+    handleChange(event) {
+        this.setState({
+            cardName: event.target.value
+        })
     }
 
     render() {
@@ -63,9 +78,10 @@ export default class PieArea extends Component {
                   ref={'input-text-' + this.props.cardId}
                   type="text"
                   className="card_name"
-                  value={this.props.name}
+                  value={this.state.cardName}
                   maxLength="25"
-                  onBlur={this.updateTitle}>
+                  onBlur={this.updateTitle}
+                  onChange={this.handleChange}>
                 </input>
             </span>
         );

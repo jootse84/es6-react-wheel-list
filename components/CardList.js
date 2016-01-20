@@ -10,13 +10,17 @@ export default class CardList extends Component {
         return (
             <ul id="card-list">
                 { this.props.cards.map((element, i) => {
+                    var labels = element[this.props.labelsId] ?
+                      element[this.props.labelsId] : []
+
                     return (
                         <Card
                             key={'key-' + element[this.props.cardId]}
                             card={element}
                             cardId={this.props.cardId}
-                            labels={element[this.props.labelsId]}
+                            labels={labels}
                             labelId={this.props.labelId}
+                            cardName={element[this.props.nameId]}
                             titleChanged={this.props.titleChanged}
                             delLabelClicked={this.props.delLabelClicked}
                             addLabelClicked={this.props.addLabelClicked}
