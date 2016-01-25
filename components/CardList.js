@@ -30,7 +30,7 @@ export default class CardList extends Component {
                 }) }
                 <li id="add_card_box">
                     <a onClick={this.props.addCardClicked}>
-                        <img src="static/images/ic_add.png"/>
+                        <img src="images/ic_add.png"/>
                         { this.props.addCardText }
                     </a>
                 </li>

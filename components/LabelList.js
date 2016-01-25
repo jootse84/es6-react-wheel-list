@@ -36,7 +36,7 @@ export default class LabelList extends Component {
                             </a>
                             <a onClick={this.deleteLabel(this.props.card, element)}>
                                 <img
-                                  src="static/images/vcam_close.png"
+                                  src="images/vcam_close.png"
                                   className="close_s"
                                   data-uid={element.uid}>
                                 </img>
